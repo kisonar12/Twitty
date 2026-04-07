@@ -1,0 +1,91 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Form container */
+.form-container {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.message-container {
+    text-align: center;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #fff;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-link {
+    color: blue; /* Blue color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Optional: Makes the text bold */
+}
+
+.login-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.logout-btn:hover {
+    background-color: #555;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #444;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #555;
+}

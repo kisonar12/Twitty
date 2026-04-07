@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Log out button styles */
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #444;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .logout-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Log out button -->
+    <button class="logout-btn" onclick="logout()">Log Out</button>
+
+    <div class="info-container">
+        <h2>Welcome to Your Home Page</h2>
+        <p><strong>Username:</strong> <span id="display-username"></span></p>
+        <p><strong>Email:</strong> <span id="display-email"></span></p>
+        <p><strong>Password:</strong> <span id="display-password"></span></p>
+    </div>
+
+    <script>
+        // Function to load user data from localStorage and display it
+        window.onload = function() {
+            const username = localStorage.getItem('username');
+            const email = localStorage.getItem('email');
+            const password = localStorage.getItem('password');
+
+            // Display data in the homepage
+            document.getElementById('display-username').textContent = username;
+            document.getElementById('display-email').textContent = email;
+            document.getElementById('display-password').textContent = password;
+        }
+
+        // Function to log out the user
+        function logout() {
+            // Clear user data from localStorage
+            localStorage.removeItem('username');
+            localStorage.removeItem('email');
+            localStorage.removeItem('password');
+
+            // Redirect to the login page (or any other page you want)
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
